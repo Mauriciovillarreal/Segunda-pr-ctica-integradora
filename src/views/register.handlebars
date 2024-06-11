@@ -1,0 +1,28 @@
+<main class="mainLogin">
+    <div class="bg">
+        <div class="login">
+            <form action="/api/sessions/register" method="POST">
+                <p>Crear cuenta</p>
+                <label class="uperCase">Name</label>
+                <input type="text" name="first_name" class="control">
+                <label class="uperCase">Last name</label>
+                <input type="text" name="last_name" class="control">
+                <label class="uperCase">Email</label>
+                <input type="email" name="email" class="control">
+                <label class="uperCase">Age</label>
+                <input type="number" name="age" class="control">
+                <label class="uperCase">Password</label>
+                <input type="password" name="password" class="control">
+                <span>
+                    <p>¿Ya tenés una cuenta? <a href="/login">Iniciá sesión</a> </p>
+                </span>
+                <hr>
+                <button type="submit" class="btnLogin">REGISTER</button>
+                {{#if error}}
+                <p class="error">{{error}}</p>
+                {{/if}}
+            </form>
+
+        </div>
+    </div>
+</main>

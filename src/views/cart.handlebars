@@ -1,0 +1,42 @@
+<main class="container">
+  <div class="cartContainer">
+    <h5 class="text-center">CARRITO</h5>
+    <h6 class="text-center cartEmpty"></h6>
+    <div class="cart">
+      <div class="cartProducts">
+        {{#if carts.products}}
+        <div class="detailCart">
+          {{#each carts.products}}
+          <div class="imageContainer">
+            <img src="{{this.product.thumbnails}}" width="80px" alt="">
+          </div>
+          <div class="containermenu">
+            <ul>
+              <li class="product">
+                <div class="name">{{this.product.brands}}</div>
+                <div class="brands">{{this.product.name}}</div>
+                Quantity: <span class="quantity">{{this.quantity}}</span> <br>
+                Price: $<span class="price">{{this.product.price}}</span> <br>
+              </li>
+            </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="cartButton">
+        <button>FINALIZAR COMPRA - TOTAL:
+          <span id="totalPrice" class="total"></span>
+        </button>
+        <input type="hidden" id="cartId" value="{{this.user.cart}}">
+        <button id="deleteCartButton" onclick="deleteCart()">BORRAR CARRITO</button>
+      </div>
+      {{else}}
+      <h6 class="text-center">Tu carrito esta vacio</h6>
+      {{/if}}
+    </div>
+  </div>
+</main>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/cart.js"></script>

@@ -1,0 +1,71 @@
+<main class="container">
+    <h1 class="text-start h6">Perfumes</h1>
+    <hr>
+    <div class="productsMain">
+        <aside>
+            <br>
+            <form id="filterForm" method="get" action="/">
+                <label for="brandFilter" class="h4">Marca</label>
+                <div>
+                    {{#each brands}}
+                    <label>
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="brands"
+                            value="{{this}}">
+                        {{this}}
+                    </label><br>
+                    {{/each}}
+                </div>
+                <br>
+                <label for="categoryFilter" class="h4">Género</label>
+                <div>
+                    {{#each categories}}
+                    <label>
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="category"
+                            value="{{this}}">
+                        {{this}}
+                    </label><br>
+                    {{/each}}
+                </div> <br>
+                <div>
+                    <button type="submit">Buscar</button>
+                </div>
+            </form>
+        </aside>
+        <div>
+            <input type="hidden" id="cartId" value="{{this.user.cart}}">
+            <ul id="products-list" class="row">
+                {{#each products}}
+                <li class="col">
+                    <img src="{{this.thumbnails}}" width="200px" alt="">
+                    <div class="cardDetail">
+                        <h2 class="text-start h6 ms-1">{{this.brands}}</h2>
+                        <h3 class="text-start ms-1">{{this.name}}</h3>
+                        <h4 class="text-start h5 col ms-1">${{this.price}}</h4>
+                    </div>
+                    <div class="btnBuyDetail">
+                        <div>
+                            <button class="btnAdd" data-product-id="{{this._id}}">BUY</button>
+                        </div>
+                        <div class="btnDetail text-center">
+                            <a href="/productdetail/{{this._id}}" class="text-center">DETAIL</a>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="pagiante">
+        {{#if hasPrevPage}}
+        <a href="/?numPage={{prevPage}}">ANTERIOR</a>
+        {{/if}}
+        <label>PAGINA {{page}}</label>
+        {{#if hasNextPage}}
+        <a href="/?numPage={{nextPage}}">SIGUIENTE</a>
+        {{/if}}
+    </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>

@@ -1,0 +1,28 @@
+<main >
+    <h1 class="text-start h6 container">Real-time Products</h1>
+    <hr class="container">
+    <div class="realTimeProducts container">
+        <div>
+            <ul id="products-list" class="row"></ul>
+        </div>
+        <div class="operateProducts ">
+            <h3>Add Products </h3>
+            <form id="add-product-form">
+                <label>Product Name</label>
+                <input type="string" id="product-name" class="form-control" required>
+                <label>Price</label>
+                <input type="number" id="product-price" class="form-control" required>
+                <button type="submit" class="btn btn-secondary btn-sm bg-black col btnAdd">ADD</button>
+            </form>
+            <h3>Delete Products </h3>
+            <form id="delete-product-form">
+                <label>Product id</label>
+                <input type="string" id="delete-product-id" class="form-control" required>
+                <button type="submit" class="btn btn-secondary btn-sm bg-black col btnAdd">DELETE</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

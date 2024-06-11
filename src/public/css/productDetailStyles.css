@@ -1,0 +1,32 @@
+.containerDetail {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.containerDetail li {
+    list-style: none;
+    height: 100%;
+    border: 1px solid rgb(214, 214, 214);
+    padding: 10px;
+}
+
+.totalCuotas{
+    background-color: #414141;
+    display: initial;
+    padding: 2px 12px;
+    color: white;
+    font-size: 14px;
+}

@@ -1,0 +1,118 @@
+.productsMain {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+/* Estilos para filtados */
+aside button {
+    background-color: rgb(255, 223, 119);
+    width: 70%;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+aside button:hover {
+    background-color: rgb(212, 175, 55);
+}
+
+/* Estilos de lista de productos */
+#products-list li {
+    width: auto;
+    border: 1px solid rgb(216, 216, 216);
+    text-align: center;
+    list-style: none;
+    margin: 15px;
+    padding: 0px;
+}
+
+#products-list img {
+    margin-top: 50px;
+}
+
+#products-list h2 {
+    text-transform: uppercase;
+    margin: 50 !important;
+    padding-top: 18px !important;
+    margin-bottom: -3px !important;
+}
+
+#products-list h3 {
+    color: rgb(168, 168, 168);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#products-list .cardDetail {
+    margin-top: 50px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    margin-bottom: -15px;
+}
+
+.btnBuyDetail {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btnAdd {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgb(255, 223, 119);
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.btnAdd:hover {
+    background-color: rgb(212, 175, 55);
+}
+
+.btnDetail a {
+    text-decoration: none;
+    color: white;
+    margin: 2px;
+}
+
+.btnDetail {
+    padding-top: 2px;
+    border: none;
+    background-color: rgb(255, 223, 119);
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btnDetail:hover {
+    background-color: rgb(212, 175, 55);
+}
+
+.btnDetail a:hover {
+    color: white;
+}
+
+/* bootstrap container estilos cambiados */
+
+.pagiante {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.pagiante a {
+    text-decoration: none;
+    color: #337ab7;
+    transition: color 0.2s ease;
+    font-size: 12px;
+}
+
+.toastify {
+    padding: 15px 20px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    left: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+}

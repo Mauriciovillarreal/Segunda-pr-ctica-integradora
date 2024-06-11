@@ -1,0 +1,27 @@
+<main>
+    <div class="bg">
+        <div class="login">
+            <form action="/api/sessions/login" method="POST">
+                <p>Iniciar sesión</p>
+                <label class="uperCase">Email</label>
+                <input type="email" name="email" class="control">
+                <label class="uperCase">Password</label>
+                <input type="password" name="password" class="control">
+                <p>¿No tenés cuenta aún? <a href="/register">Crear cuenta</a></p>
+
+                <hr>
+                <button type="submit" class="btnLogin">LOGIN</button>
+                {{#if error}}
+                <p class="error">{{error}}</p>
+                {{/if}}
+
+
+                <div class="containerBtnGH">
+                    <a href="/api/sessions/github" class=" btnGitHub  ">
+                        <img src="/img/github.png" width="50px" alt="">
+                        Sign up with GitHub</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

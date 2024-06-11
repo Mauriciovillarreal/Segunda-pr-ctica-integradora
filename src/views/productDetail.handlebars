@@ -1,0 +1,27 @@
+<main class="container">
+    <h1 class="text-start h6">{{product.name}}</h1>
+    <hr>
+    <div class="containerDetail">
+        <div class="imageContainer">
+            <img src="{{product.thumbnails}}" width="600px" class="text-center" alt="Product Image"></img>
+        </div>
+        <div>
+            <li>
+                <h6>{{product.brands}}</h6>
+                <h6>Code: {{product.code}}</h6>
+                <h6>Gender: {{product.category}}</h6>
+                <h4 class="fw-bold price">${{product.price}}</h4>
+                <h6 class="totalCuotas"></h6>
+                <img src="/img/tarjetas.png" width="70%" class="mt-2" alt="tarjetas">
+            </li>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h5 class="text-center mt-6">Descripción</h5>
+        <hr>
+        <h6 class="h6">{{product.description}}</h6>
+    </div>
+</main> 
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/productdetail.js"></script>

@@ -1,0 +1,58 @@
+<header class="sticky-top">
+    <nav class="container-fluid">
+        <div id="logo">
+            <h1 class="text-center">4444</h1>
+        </div>
+        <div class="user">
+            {{#if user}}
+            <h6>Welcome {{user.name}} </h6>
+            <div class="offcanvas-nav" id="menu-offcanvas">
+                <div class="containermenu">
+                    <button class="close-btn" id="menu-close-btn">x</button>
+                    <dic class="menuInfo">
+                        <h5>{{user.name}}</h5>
+                        <div>Last name: {{user.lastname}} </div>          
+                        <div>Email: {{user.email}} </div>
+                        <div>Role: {{user.role}}</div>
+                     
+                    </dic>
+                    <a href="/api/sessions/logout" class="text-center" method="POST"> SIGN OUT
+                    </a>
+                </div>
+            </div>
+            <div class="offcanvas-nav" id="cart-offcanvas">
+                <div class="containermenu " id="cart">
+                    <button class="close-btn" id="cart-close-btn">x</button>
+                    {{> cart}}
+                </div>
+            </div>
+            <div class="main-content">
+                <button class="open-btn" id="menu-open-btn">
+                    <img src="/img/user.png" width="25px" alt="">
+                </button>
+                <button class="open-btn" id="cart-open-btn">
+                    <img src="/img/cart.png" width="21px" alt="">
+                </button>
+            </div>
+            <div class="quantity">
+                <h5><span id="navTotalQuantity" class="total"></span></h5>
+            </div>
+            {{else}}
+            <div class="main-content">
+                <a href="/login" class="open-btn">
+                    <img src="/img/user.png" width="22px" alt="">
+                </a>
+            </div>
+            {{/if}}
+        </div>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="/">PERFUMES</a></li>
+                <li><a href="/chat">CHAT</a></li>
+                <li><a href="/realtimeproducts">REALTIMEPRODUCTS</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script src="/js/navBar.js"></script>
